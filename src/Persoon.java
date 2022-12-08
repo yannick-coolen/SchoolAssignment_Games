@@ -37,9 +37,18 @@ public class Persoon {
         return false;
     }
 
+    public Game zoekGameOpNaam(String naamVanGame) {
+        for (Game mijnGame : mijnGames) {
+            if (naamVanGame.equals(mijnGame.getNaam())) {
+                return mijnGame;
+            }
+        }
+        return null;
+    }
+
     @Override
     public String toString() {
-        StringBuilder sGames= new StringBuilder();
+        StringBuilder sGames = new StringBuilder();
 
         for (Game mijnGame : mijnGames) {
             sGames.append("\n").append(mijnGame);
