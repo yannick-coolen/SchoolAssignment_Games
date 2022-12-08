@@ -46,6 +46,18 @@ public class Persoon {
         return null;
     }
 
+    public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> teKoop) {
+//            System.out.println(teKoop);
+//        for (int i = 0; i < mijnGames.size(); i++) {
+////            if (!mijnGames.contains(teKoop.get(i))) {
+////                teKoop.
+////                teKoop.get(teKoop.size() - 1);
+////                //return teKoop;
+////            }
+//        }
+        return teKoop;
+    }
+
     @Override
     public String toString() {
         StringBuilder sGames = new StringBuilder();
