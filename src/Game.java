@@ -16,8 +16,10 @@ public class Game {
     }
 
     public double huidigeWaarde() {
-        if (releaseJaar < LocalDate.now().getYear()) {
-            return nieuwprijs - (nieuwprijs / 100 * 30);
+        if (LocalDate.now().getYear() - releaseJaar > 0) {
+            for (int i = 0; i < LocalDate.now().getYear() - releaseJaar; i++) {
+                return nieuwprijs - (nieuwprijs / 100 * 30);
+            }
         }
         return nieuwprijs;
     }
