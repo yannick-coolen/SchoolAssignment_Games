@@ -47,14 +47,9 @@ public class Persoon {
     }
 
     public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> teKoop) {
-//            System.out.println(teKoop);
-//        for (int i = 0; i < mijnGames.size(); i++) {
-////            if (!mijnGames.contains(teKoop.get(i))) {
-////                teKoop.
-////                teKoop.get(teKoop.size() - 1);
-////                //return teKoop;
-////            }
-//        }
+        for (Game mijnGame : mijnGames) {
+            teKoop.remove(mijnGame);
+        }
         return teKoop;
     }
 
