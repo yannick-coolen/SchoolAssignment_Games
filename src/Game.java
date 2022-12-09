@@ -11,10 +11,19 @@ public class Game {
         this.nieuwprijs = nieuwprijs;
     }
 
+    /**
+     * Toont de naam van het geïnstantieerde object van de klasse.
+     * @return Naam van geïnstantieerde object.
+     */
     public String getNaam() {
         return naam;
     }
 
+    /**
+     * Berekend het huidige prijs op basis hoe oud het game is.
+     * Per jaar wordt moet het huidige prijs worden gereduceerd met 30%.
+     * @return Nieuwe prijs op basis van percentage aftrek per jaar.
+     */
     public double huidigeWaarde() {
         if (releaseJaar < LocalDate.now().getYear()) {
             return nieuwprijs * Math.pow(0.7,
